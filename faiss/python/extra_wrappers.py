@@ -137,6 +137,7 @@ def eval_intersection(I1, I2):
 
 
 def normalize_L2(x):
+    x = np.ascontiguousarray(x, dtype='float32')
     fvec_renorm_L2(x.shape[1], x.shape[0], swig_ptr(x))
 
 bucket_sort_c = bucket_sort
